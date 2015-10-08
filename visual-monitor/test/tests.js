@@ -54,12 +54,11 @@ describe('Visual monitor testing', function() {
       .moveToObject(".options-wrapper")
       .webdrivercss(testName + '.homepage', {
         name: '1',
-        exclude: [],
         remove:
           [
+            // Main title.
             '.main-title'
           ],
-        hide: [],
         screenWidth: selectedCaps == 'chrome' ? [960] : undefined,
       }, resultsCallback)
       .call(done);
